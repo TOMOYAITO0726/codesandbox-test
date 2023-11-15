@@ -43,7 +43,7 @@
 //     return str;
 // }
 // console.log(func1("func1です")); //func1です
-// //アロー関数
+//アロー関数
 // const func2 = (str) => {
 //     return str;
 // }
@@ -64,12 +64,12 @@
 //     name:"じゃけえ",
 //     age: 28,
 // };
-// const message1 =`名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
+// const message1 =`名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;プロパティを参照
 // console.log(message1);
-// const {name, age} = myProfile;
-// const message2 =`名前は${name}です。年齢は${age}歳です`;
-// console.log(message2);
-// const myProfile =[`じゃけえ`, 28]; //配列として定義
+//const {name, age} = myProfile;
+// const message2 =`名前は${name}です。年齢は${age}歳です`;//変数を参照
+//  console.log(message2);
+//  const myProfile =[`じゃけえ`, 28]; //配列として定義
 
 // const message3 =`名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です`;
 // console.log(message3);
@@ -88,7 +88,7 @@
 //配列の展開
 // const arr1 =[1,2];
 // //console.log(arr1);//[1,2]
-// //console.log(...arr1);//1 2 配列の中身を順番に処理
+// console.log(...arr1);//1 2 配列の中身を順番に処理
 // const sumFunc =(num1, num2) => console.log(num1 + num2);
 // //sumFunc(arr1[0], arr1[1]);//3
 // sumFunc(...arr1);//3
@@ -119,18 +119,18 @@
 /**
  * mapやfilterを使った配列の処理
  */
-const nameArr =["田中","山田","佐藤"];
+//const nameArr =["田中","山田","佐藤"];
 // for(let index = 0; index < nameArr.length; index++) {
-//     console.log(nameArr[index]);
+//     console.log(nameArr[index]);//田中、山田、佐藤
 // }
-// //returnされた結果にに基づいて新しい配列を生成する
+//returnされた結果にに基づいて新しい配列を生成する
 // const nameArr2 = nameArr.map((name)=>{
 //     return name;
 // })
- //console.log(nameArr2);//["田中","山田","佐藤"]
+//  console.log(nameArr2);//["田中","山田","佐藤"]
 //配列をループして処理する
 //nameArr.map((name) => console.log(name));//田中、山田、佐藤
-// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+//nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
 
 //Filter→ある条件に一致した値を取り出す
 // const numArr = [1, 2, 3, 4, 5];
@@ -151,15 +151,15 @@ const nameArr =["田中","山田","佐藤"];
  * 三項演算子
  */
 //ある条件？条件がtrueの時:条件がfalseの時
-// const num = 1300;
-// console.log(num.toLocaleString()); //1,300カンマ区切りで表示
-// const formattedNum = typeof num == `number` ? num.toLocaleString() : `数値を入力してください`;
-// console.log(formattedNum); //数字の時はカンマ区切りで表示　文字ならば「数値を入力してください」
+const num = 1300;
+console.log(num.toLocaleString()); //1,300カンマ区切りで表示
+const formattedNum = typeof num == `number` ? num.toLocaleString() : `数値を入力してください`;
+console.log(formattedNum); //数字の時はカンマ区切りで表示　文字ならば「数値を入力してください」
 
-// const checkSum = (num1, num2) => {
-//     return num1 + num2 > 100 ? `100を超えています!!` : `許容範囲内です`;
-// }
-// console.log(checkSum(20, 81)); //100を超えています!!
+const checkSum = (num1, num2) => {
+    return num1 + num2 > 100 ? `100を超えています!!` : `許容範囲内です`;
+}
+console.log(checkSum(20, 81)); //100を超えています!!
 /**
  * 論理演算子の本当の意味を知ろう && ||
  */
